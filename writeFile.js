@@ -1,17 +1,17 @@
 const fs = require('fs');
-const content = 'Это добавлено методом writeFile!';
-fs.writeFile('tmp.txt', content, (err) => {
+const content1 = 'Это добавлено методом writeFile!';
+fs.writeFile('tmp.txt', content1, (err) => {
   if (err) {
     console.error(err);
     return;
   }
   //файл записан успешно
 });
-const content = 'А это добавлено методом appendFile!'
-fs.appendFile('file.log', content, (err) => {
+const content2 = 'А это добавлено методом appendFile!';
+fs.appendFile('tmp.txt', content2, (err) => {
   if (err) {
-    console.error(err)
-    return
+    console.error(err);
+    return;
   }
   //готово!
-})
+});
