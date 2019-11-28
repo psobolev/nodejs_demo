@@ -1,10 +1,10 @@
 const fs = require('fs');
 // Открываем файл для чтения
-fs.open('./test.txt', 'r', (err, fd) => {
+fs.open('test.txt', 'r', (err, fd) => {
   //fd - это дескриптор файла
 })
 // Получаем сведения о файле
-fs.stat('./test.txt', (err, stats) => {
+/*fs.stat('./test.txt', (err, stats) => {
   if (err) {
     console.error(err);
     return
@@ -12,3 +12,14 @@ fs.stat('./test.txt', (err, stats) => {
   //сведения о файле содержатся в аргументе `stats`
 });
 console.log(stats.isFile(), stats.isDirectory(), stats.isSymbolicLink(), stats.size);
+const fs = require('fs') */
+fs.stat('test.txt', (err, stats) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  stats.isFile() //true
+  stats.isDirectory() //false
+  stats.isSymbolicLink() //false
+  stats.size //1024000 //= 1MB
+})
