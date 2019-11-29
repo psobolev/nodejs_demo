@@ -1,4 +1,4 @@
-function User(name){
+function User(name) {
     this.name = name;
 };
  
@@ -8,4 +8,4 @@ User.prototype.hello = function(who){
 
 console.log("user.js is required!");
 
-global.User = User;
+// global.User = User;
